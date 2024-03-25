@@ -110,7 +110,7 @@ const keyChanges = { product: "name", price: "cost" };
 
 const reformattedProducts = products.map((product) => {
   return Object.entries(product).reduce((newProduct, [key, value]) => {
-    const newKey = keyChanges[key] || key; // Change the key if needed
+    const newKey = keyChanges[key] || key;
     newProduct[newKey] = value;
     return newProduct;
   }, {});
